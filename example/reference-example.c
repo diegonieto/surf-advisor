@@ -3,16 +3,13 @@
 int
 main (int argc, char *argv[])
 {
-  GstElement *pipeline, *source, *hls_demux, *decode_bin, *videoconvert, *videoscale, *sink;
+  GstElement *pipeline;
   GstBus *bus;
   GstMessage *msg;
   GstStateChangeReturn ret;
 
   /* Initialize GStreamer */
   gst_init (&argc, &argv);
-
-  /* Init url */
-  char *location_url = "https://hd-auth.skylinewebcams.com/live.m3u8?a=9i983ev8rvm6dj95t03l1a1d91";
 
   pipeline =
       gst_parse_launch
