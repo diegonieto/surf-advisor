@@ -18,6 +18,7 @@ main (int argc, char *argv[])
         "decodebin ! "
         "videoconvert ! "
         "videoscale ! "
+        "textoverlay text=\"Diego Nieto\" valignment=bottom halignment=left font-desc=\"Sans, 10\" ! "
         "autovideosink",
       NULL);
 
